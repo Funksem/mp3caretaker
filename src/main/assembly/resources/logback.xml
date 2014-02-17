@@ -1,0 +1,78 @@
+<configuration debug="false" scan="false" scanPeriod="30 seconds">
+
+    <appender name="mp3caretakerFileAppender" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/mp3caretaker.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%date{yyyy-MM-dd HH:mm:ss.SSS} [%20.20t] %-5level %25.25class{25}:%-5line %message%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <appender name="RESULT-OK-LOG-APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/Result-Ok.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="RESULT-KEIN-MP3-LOG-APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/Result-KeinMP3.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="RESULT-KEIN-ID3TAG-LOG-APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/Result-KeinId3Tag.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="RESULT-UNVOLLSTAENDIG-ID3TAG-LOG-APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/Result-UnvollstaendigId3Tag.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+    <appender name="RESULT-TECHNISCH-FALSCH-LOG-APPENDER" class="ch.qos.logback.core.FileAppender">
+        <file>/temp/logs/Result-TechnischFalsch.log</file>
+        <append>false</append>
+        <encoder>
+            <pattern>%m%n</pattern>
+            <charset>UTF-8</charset>
+        </encoder>
+    </appender>
+
+    <logger name="de.funksem" level="DEBUG" />
+    <logger name="org" level="WARN" />
+    <logger name="com" level="WARN" />
+    <logger name="apache" level="WARN" />
+
+    <logger name="Result-Ok-Log" level="INFO" additivity="false">
+        <appender-ref ref="RESULT-OK-LOG-APPENDER" />
+    </logger>
+    <logger name="Result-Kein-Mp3-Log" level="INFO" additivity="false">
+        <appender-ref ref="RESULT-KEIN-MP3-LOG-APPENDER" />
+    </logger>
+    <logger name="Result-Kein-Id3Tag-Log" level="INFO" additivity="false">
+        <appender-ref ref="RESULT-KEIN-ID3TAG-LOG-APPENDER" />
+    </logger>
+    <logger name="Result-Unvollstaendig-Id3Tag-Log" level="INFO" additivity="false">
+        <appender-ref ref="RESULT-UNVOLLSTAENDIG-ID3TAG-LOG-APPENDER" />
+    </logger>
+    <logger name="Result-Technisch-Falsch-Log" level="INFO" additivity="false">
+        <appender-ref ref="RESULT-TECHNISCH-FALSCH-LOG-APPENDER" />
+    </logger>
+    
+    <root level="debug">
+        <appender-ref ref="mp3caretakerFileAppender" />
+    </root>
+    
+</configuration>

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<musicfilter>
+
+    <!-- ======================================================= -->
+    <!-- Filter: ID-Tag -->
+    <!-- ======================================================= -->
+    <filterId3Tag>
+        <active>true</active>
+    </filterId3Tag>
+    <!-- ======================================================= -->
+    <!-- Filter: Bitrate -->
+    <!-- ======================================================= -->
+    <filterBitrate>
+        <active>true</active>
+        <minimum>128</minimum>
+    </filterBitrate>
+    <!-- ======================================================= -->
+    <!-- Filter: ID-Tag Entries -->
+    <!-- Track Artist Title Album Year Genre Comment -->
+    <!-- ======================================================= -->
+    <filterTagsAvailable>
+        <active>true</active>
+        <mandatoryTags>
+            <mandatoryTag>Album</mandatoryTag>
+            <mandatoryTag>Artist</mandatoryTag>
+            <mandatoryTag>Title</mandatoryTag>
+        </mandatoryTags>
+    </filterTagsAvailable>
+
+</musicfilter>

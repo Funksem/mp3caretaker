@@ -1,0 +1,9 @@
+
+------------------------------------------------------
+MP3 Caretaker v${project.version}
+Copyright (c) 2014 by Funksem. All rights reserved.
+------------------------------------------------------
+Mode:   FILTER  - Find special mp3 files
+        SHOW    - Show information of MP3 files
+        CLEAN   - Clean MP3 files
+------------------------------------------------------
