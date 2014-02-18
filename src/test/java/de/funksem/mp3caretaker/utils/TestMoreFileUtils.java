@@ -15,7 +15,7 @@ public class TestMoreFileUtils
 
         for (String extension : testExtensions)
         {
-            assertTrue(IOFiles.isMp3Extension(extension));
+            assertTrue(Mp3FileUtils.isMp3Extension(extension));
         }
     }
 
@@ -27,7 +27,7 @@ public class TestMoreFileUtils
 
         for (String extension : testExtensions)
         {
-            assertFalse(IOFiles.isMp3Extension(extension));
+            assertFalse(Mp3FileUtils.isMp3Extension(extension));
         }
     }
 }
