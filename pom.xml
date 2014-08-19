@@ -13,6 +13,7 @@
 	<packaging>jar</packaging>
 
 	<name>de.funksem.mp3caretaker</name>
+	
 
 	<properties>
 		<maven.build.timestamp.format>yyyyMMdd-HHmm</maven.build.timestamp.format>
